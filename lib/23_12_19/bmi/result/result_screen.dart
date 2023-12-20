@@ -28,12 +28,13 @@ class ResultScreen extends StatelessWidget {
 
   Widget _buildIcon(double bmi) {
     Icon icon = const Icon(
-        Icons.sentiment_very_dissatisfied,
-        color: Colors.red,
-        size: 100,
+      Icons.sentiment_very_dissatisfied,
+      color: Colors.red,
+      size: 100,
     );
     if (bmi >= 23) {
-      icon = const Icon(Icons.sentiment_dissatisfied,
+      icon = const Icon(
+        Icons.sentiment_dissatisfied,
         color: Colors.yellow,
         size: 100,
       );
