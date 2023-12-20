@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/23_12_19/bmi/result/result_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -14,10 +15,33 @@ class _MainScreenState extends State<MainScreen> {
   final _weightController = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+    load();
+  }
+
+  @override
   void dispose() {
     _heightController.dispose();
     _weightController.dispose();
     super.dispose();
+  }
+
+  Future save() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setDouble('height', double.parse(_heightController.text));
+    await prefs.setDouble('weight', double.parse(_weightController.text));
+  }
+
+  Future load() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    final double? height = prefs.getDouble('height');
+    final double? weight = prefs.getDouble('weigth');
+
+    if (height != null || weight != null) {
+      _heightController.text = '$height';
+      _weightController.text = '$weight';
+    }
   }
 
   @override
@@ -65,6 +89,7 @@ class _MainScreenState extends State<MainScreen> {
                   if (_formkey.currentState?.validate() == false) {
                     return;
                   }
+                  save();
                   Navigator.push(
                     context,
                     MaterialPageRoute(
