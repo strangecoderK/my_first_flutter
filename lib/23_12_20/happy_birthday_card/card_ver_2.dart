@@ -32,25 +32,29 @@ class _BirthDayCardState extends State<BirthDayCard> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: [
-          Image.network(
-            'https://img.freepik.com/premium-photo/wallpapers-for-iphone-is-the-best-high-definition-iphone-wallpaper-in-you-can-make-this-wallpaper-for-your-iphone-x-backgrounds-mobile-screensaver-or-ipad-lock-screen-iphone-cute-cute_902639-30990.jpg',
-            width: double.infinity,
-            height: double.infinity,
+
+        children: <Widget>[
+          Positioned.fill(
+            child: Image.network(
+              'https://img.freepik.com/premium-photo/wallpapers-for-iphone-is-the-best-high-definition-iphone-wallpaper-in-you-can-make-this-wallpaper-for-your-iphone-x-backgrounds-mobile-screensaver-or-ipad-lock-screen-iphone-cute-cute_902639-30990.jpg',
+              // width: double.infinity,
+              // height: double.infinity,
+              fit: BoxFit.cover,
+            ),
           ),
-          Center(
+          const Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Happy\nBirthDay\nVicky',
+                  'Happy\nBirthDay\nVicky!',
                   style: TextStyle(
                     fontSize: 100,
                   ),
                   textAlign: TextAlign.center,
                 ),
                 Text(
-                  'from Chrity',
+                  'from Christy',
                   style: TextStyle(fontSize: 30),
                   textAlign: TextAlign.center,
                 )
