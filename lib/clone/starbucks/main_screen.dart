@@ -37,23 +37,30 @@ class _StarBucksMainState extends State<StarBucksMain> {
               floating: false,
               expandedHeight: 280,
               flexibleSpace: FlexibleSpaceBar(
-                background:
-                Column(
+                background: Column(
                   children: [
                     Image.asset(
                       'assets/starbucks_1.png',
                     ),
                     Row(
                       children: [
-                        SizedBox(width: 10,),
-                        Text('2',
-                          style: TextStyle(color: Colors.orangeAccent),),
-                        Icon(Icons.star,color: Colors.orangeAccent,),
-                        Text('until next Reward',
-                          style: TextStyle(color: Colors.orangeAccent),),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          '2',
+                          style: TextStyle(color: Colors.orangeAccent),
+                        ),
+                        Icon(
+                          Icons.star,
+                          color: Colors.orangeAccent,
+                        ),
+                        Text(
+                          'until next Reward',
+                          style: TextStyle(color: Colors.orangeAccent),
+                        ),
                       ],
                     ),
-
                     Row(
                       children: [
                         new LinearPercentIndicator(
@@ -64,10 +71,19 @@ class _StarBucksMainState extends State<StarBucksMain> {
                           progressColor: Colors.orangeAccent,
                         ),
                         Spacer(),
-                        Text('10',style: TextStyle(fontSize: 30),),
-                        Text('/12',style: TextStyle(fontSize: 20,color: Colors.orangeAccent),),
-
-                        Icon(Icons.star,color: Colors.orangeAccent,),
+                        Text(
+                          '10',
+                          style: TextStyle(fontSize: 30),
+                        ),
+                        Text(
+                          '/12',
+                          style: TextStyle(
+                              fontSize: 20, color: Colors.orangeAccent),
+                        ),
+                        Icon(
+                          Icons.star,
+                          color: Colors.orangeAccent,
+                        ),
                         SizedBox(
                           width: 15,
                         ),
@@ -78,9 +94,7 @@ class _StarBucksMainState extends State<StarBucksMain> {
               ),
               bottom: PreferredSize(
                 preferredSize: Size.fromHeight(50),
-
                 child: Row(
-
                   children: [
                     SizedBox(
                       width: 10,
@@ -122,7 +136,6 @@ class _StarBucksMainState extends State<StarBucksMain> {
                   ],
                 ),
               ),
-
             ),
             SliverList(
               delegate: SliverChildListDelegate(
@@ -137,7 +150,7 @@ class _StarBucksMainState extends State<StarBucksMain> {
                   ),
                   Container(
                     constraints:
-                    const BoxConstraints.tightFor(width: 400, height: 200),
+                        const BoxConstraints.tightFor(width: 400, height: 200),
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
@@ -155,7 +168,6 @@ class _StarBucksMainState extends State<StarBucksMain> {
                                     width: 400,
                                   ),
                                 ),
-
                               ],
                             )),
                         Container(
@@ -172,7 +184,6 @@ class _StarBucksMainState extends State<StarBucksMain> {
                                     width: 400,
                                   ),
                                 ),
-
                               ],
                             )),
                         Container(
@@ -189,7 +200,6 @@ class _StarBucksMainState extends State<StarBucksMain> {
                                     width: 400,
                                   ),
                                 ),
-
                               ],
                             )),
                       ],
