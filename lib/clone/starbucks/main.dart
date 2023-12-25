@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Starbucks',
-      theme: ThemeData(buttonTheme: const ButtonThemeData(shape: CircleBorder()),
+      theme: ThemeData(floatingActionButtonTheme: const FloatingActionButtonThemeData(shape: StadiumBorder()),
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.white)
       ),
       home: const StarBucksMain(),
